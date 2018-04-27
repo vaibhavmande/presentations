@@ -1,0 +1,28 @@
+.text-center {
+    text-align: center;
+}
+
+.reveal li {
+    padding: 2px;
+}
+
+.reveal ul li {
+    font-family: sans-serif;
+    font-weight: lighter;
+    line-height: 1.2;
+}
+
+.reveal .sub-heading {
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.underline {
+    text-decoration: underline !important;
+}
+
+.big-font {
+    font-size: 125px !important;
+}

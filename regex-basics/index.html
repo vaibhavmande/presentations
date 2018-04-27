@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Regex Basics</title>
+
+		<meta name="description" content="Basics of pattern building">
+		<meta name="author" content="vbrmnd">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Regular Expression Patterns</h1>
+					<h2 class="sub-heading">Basics of pattern building</h2>
+					<p>
+						<small>Created by <a href="https://github.com/vbrmnd">Vaibhav Mande</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Regular expresssions can be used for</h2>
+					<ul>
+						<li>Search &amp; Replace code</li>
+						<li>Renaming multiple files</li>
+						<li>Database searches etc.</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Any disadvantage of regular expressions?</h2>
+						<p>
+                            <span class="fragment">
+                                <code class="hljs">
+                                    /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+					            </code>
+                            </span>
+					</section>
+				</section>
+
+
+				<section>
+					<h2>Pattern Matching</h2>
+					<ul>
+					    <li>Matching a literal character</li>
+					    <li>Using Meta-characters</li>
+					    <ul>
+					        <li>Single Character</li>
+					        <li>Quantifiers</li>
+					        <li>Positional</li>
+					    </ul>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Single character</h2>
+					<ol>
+					    <li><code class="hljs">\d -> 0-9</code></li>
+					    <li><code class="hljs">\w -> A-Za-z0-9</code></li>
+					    <li><code class="hljs">\s -> Any whitespace</code></li>
+					    <li><code class="hljs">. &amp; *</code></li>
+                    </ol>
+				</section>
+				<section>
+					<h2>Quantifiers</h2>
+                    <ol>
+                        <li><code class="hljs">* -> 0 or More</code></li>
+                        <li><code class="hljs">+ -> One or more (at least one)</code></li>
+                        <li><code class="hljs">? -> 0 or 1 (Optional)</code></li>
+                        <li><code class="hljs">{min,max}</code></li>
+                    </ol>
+				</section>
+				<section>
+					<h2>Positional</h2>
+                    <ol>
+                        <li><code class="hljs">^ -> Start of line</code></li>
+                        <li><code class="hljs">$ -> End of line</code></li>
+                        <li><code class="hljs">\b -> Word boundary</code></li>
+                    </ol>
+				</section>
+				<section>
+					<h2>Character Classes</h2>
+                    <ol>
+                        <li><code class="hljs">[abc] -> Match a or b or c</code></li>
+                        <li><code class="hljs">[a-zA-z0-9] -> a to z Or A to Z Or 0 to 9</code></li>
+                    </ol>
+				</section>
+				<section>
+				    <h1><a href="https://regexr.com/" class="big-font" target="_blank">Exercises !!!</a></h1>
+				</section>
+				<section style="text-align: left;">
+					<h1>Thank You.</h1>
+                    <p>Made using <a href="http://revealjs.com/">RevealJs</a></p>
+
+                    <p>Content inspired from <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw">The Coding Train</a></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+			Reveal.configure({
+				keyboard: {
+					13: 'next', // go to the next slide when the ENTER key is pressed
+					32: 'next' // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+				}
+			});
+
+		</script>
+	</body>
+</html>
